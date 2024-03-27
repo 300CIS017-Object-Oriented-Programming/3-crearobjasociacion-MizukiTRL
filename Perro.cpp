@@ -87,6 +87,14 @@ Perro::~Perro() {
     delete pPropietario;
 }
 
+Raza Perro::getPRaza() {
+    return *pRaza;
+}
+
+void Perro::setPRaza(Raza *pRaza) {
+    Perro::pRaza = pRaza;
+}
+
 
 
 

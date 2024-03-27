@@ -8,6 +8,7 @@
 #include <iostream>
 #include "Propietario.h"
 #include "Veterinario.h"
+#include "Raza.h"
 
 class Perro {
 private:
@@ -18,6 +19,7 @@ private:
     std::string color;
     Propietario* pPropietario;
     Veterinario* pVeterinario;
+    Raza* pRaza;
 
 public:
     Perro();
@@ -49,5 +51,9 @@ public:
     void setPVeterinario(Veterinario *pVeterinario);
 
     void agregarVeterinario(std::string name, int yearsOfExperience);
+
+    Raza getPRaza();
+
+    void setPRaza(Raza *pRaza);
 };
 #endif
