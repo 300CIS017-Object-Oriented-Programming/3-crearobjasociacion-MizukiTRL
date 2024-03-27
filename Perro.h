@@ -7,6 +7,7 @@
 #include <string>
 #include <iostream>
 #include "Propietario.h"
+#include "Veterinario.h"
 
 class Perro {
 private:
@@ -16,6 +17,7 @@ private:
     std::string tamanio;
     std::string color;
     Propietario* pPropietario;
+    Veterinario* pVeterinario;
 
 public:
     Perro();
@@ -41,5 +43,11 @@ public:
     void setTamanio(std::string tamanio);
     std::string getColor();
     void setColor(std::string color);
+
+    Veterinario *getPVeterinario();
+
+    void setPVeterinario(Veterinario *pVeterinario);
+
+    void agregarVeterinario(std::string name, int yearsOfExperience);
 };
 #endif

@@ -31,6 +31,18 @@ Propietario *Perro::getPropietario() {
     return this->pPropietario;
 }
 
+Veterinario *Perro::getPVeterinario(){
+    return pVeterinario;
+}
+
+void Perro::setPVeterinario(Veterinario *pVeterinario) {
+    Perro::pVeterinario = pVeterinario;
+}
+
+void Perro::agregarVeterinario(std::string name, int yearsOfExperience){
+    this->pVeterinario = new Veterinario(name, yearsOfExperience);
+}
+
 int Perro::getEdad() {
     return edad;
 }
