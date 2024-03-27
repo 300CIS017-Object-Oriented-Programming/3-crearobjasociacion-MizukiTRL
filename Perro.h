@@ -19,6 +19,7 @@ private:
 
 public:
     Perro();
+    Perro(int edad,std::string nombre, std::string raza, std::string tamanio, std::string color);
     ~Perro(); //Destructor
     void ladrar();
     Propietario * getPropietario();

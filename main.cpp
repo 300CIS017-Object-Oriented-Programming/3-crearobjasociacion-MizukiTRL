@@ -5,18 +5,17 @@
 int main() {
 
     // Instanciar
-    Perro firulais;
-    firulais.setNombre("Firulais");
-    firulais.setColor("Negro");
-    firulais.setEdad(5);
-    firulais.setTamanio("Grande");
-    firulais.setRaza("Mastin napolitano");
+    Perro* firulais = new Perro(5, "Firulais","Mastin napolitado", "Grande", "negro");
 
     //Agregar un nuevo pPropietario a Firulais
-    firulais.agregarPropietario("Carlos Zapata", "102842313");
+    firulais->agregarPropietario("Carlos Zapata", "102842313");
+
+    Propietario* pedro = new Propietario("1040204");
 
     // Consultar el nombre del pPropietario del perro Firulais
-    std::cout<< "El nombre del pPropietario del perro "<<firulais.getNombre() << " es " << firulais.getPropietario()->getNombre()<<std::endl;
+    std::cout<< "El nombre del pPropietario del perro "<<firulais->getNombre() << " es " << firulais->getPropietario()->getNombre()<<std::endl;
+
+    std::cout<< firulais->getPropietario()->mostrarInfo()<< std::endl;
 
     return 0;
 }
